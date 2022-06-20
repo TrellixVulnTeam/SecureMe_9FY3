@@ -19,7 +19,7 @@ body {
 a {
   text-decoration: none;
   text-align: center;
-  color: var(--tertiaryColor); }
+  color: var(--primaryColor); }
 
 li {
   list-style: none; }
@@ -61,6 +61,7 @@ li {
     .navbar-nav .social-links .social-link {
       color: var(--primaryColor);
       padding: .4rem .8rem;
+      margin-right: 1rem;
       border-radius: 50%;
       background: #fff;
       box-shadow: inset 18px 18px 35px #fff, inset -18px -18px 35px #b9b8b8; }
@@ -164,3 +165,38 @@ li {
     width: 60%;
     text-align: justify;
     float: right; }
+
+.products {
+  text-align: center;
+  margin-bottom: 100px; }
+  .products h3 {
+    font-size: 3rem;
+    color: var(--secondaryColor);
+    padding-bottom: 1rem; }
+  .products-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 30px 100px; }
+    .products-cards .card {
+      border: 2px solid var(--tertiaryColor);
+      border-radius: 20px;
+      padding: 1.5rem; }
+      .products-cards .card-detail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1rem; }
+        .products-cards .card-detail h3 {
+          font-size: 1.5rem;
+          float: right;
+          color: var(--secondaryColor);
+          font-weight: bolder; }
+        .products-cards .card-detail h1 {
+          float: left;
+          color: #ceced1; }
+      .products-cards .card p {
+        text-align: left;
+        font-size: 1.5rem;
+        line-height: 1.4; }
