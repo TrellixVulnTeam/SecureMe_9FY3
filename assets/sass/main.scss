@@ -4,17 +4,25 @@
    margin: 0;
 }
 
+:root{
+   --primaryColor:#1783c7;
+   --secondaryColor: #4475ddb7;
+   --tertiaryColor:rgba(39, 10, 10, 0.404);
+}
+
 body{
    background-color: rgb(255, 255, 255);
    font-family: 'Anek Latin', sans-serif;
    font-size: 62%;
-   color: #1783c7;
+   color: var(--primaryColor);
+   scroll-behavior: smooth;
+   height: auto;
 }
 
 a{
    text-decoration: none;
    text-align: center;
-   color:rgba(39, 10, 10, 0.404);
+   color:var(--tertiaryColor);
 }
 
 li{
@@ -27,6 +35,7 @@ li{
    flex-direction: row;
    justify-content: space-around;
    padding: 2rem 0;
+   background-color: white;
    box-shadow: -3px -3px 7px #ffffff,
              3px 3px 5px #ceced1,
              inset -3px -3px 10px #ffffff,
@@ -35,11 +44,13 @@ li{
    position: fixed;
    top: 0;
    width: 100%;
+   z-index: 2000;
+   overflow: hidden;
 
    &-brand{
       display: flex;
       flex-direction: row;
-      color:#1783c7;
+      color:var(--primaryColor);
       height: 3rem;
      
    }
@@ -57,7 +68,7 @@ li{
          font-weight: 300!important;
          
          li a:hover{
-            border-bottom: 2px solid #1783c7;
+            border-bottom: 2px solid var(--primaryColor);
             border-width: 50%;
             transition: ease-in-out .5s;
             color: black;
@@ -73,7 +84,7 @@ li{
       .social-links{
          
          .social-link{
-            color:#1783c7;
+            color:var(--primaryColor);
             padding: .4rem .8rem;
             border-radius: 50%;
             background: #fff;
@@ -102,7 +113,7 @@ li{
    margin: 0 100px;
 
    h4, p{
-      color: #4475ddb7;
+      color: var(--secondaryColor);
       font-size: 1.5rem;
    }
 
@@ -116,7 +127,7 @@ li{
    &-border{
       width: 0px;
       height: 50%;
-      border-right: 2px solid #4475ddb7;
+      border-right: 2px solid var(--secondaryColor);
       position: absolute;
       left: 600px;
    }
@@ -125,5 +136,104 @@ li{
       float: right;
       line-height: 2;
       width: 70%;
+      text-align: justify;
+   }
+}
+
+// Features styling
+.features{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   height: 100vh;
+   
+
+   &-title{
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+      h1{
+         color: var(--secondaryColor);
+         font-size: 5rem;
+         font-weight: 600;
+      }
+
+      p{
+         color: black;
+         font-size: 1rem;
+      }
+   }
+
+   &-cards{
+      display: grid;
+      grid-template-columns: repeat(3, 2fr);
+      margin: 0 auto;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+
+      .card{
+         font-size: 1.5rem;
+         border: 2px solid transparent;
+         width: 350px;
+         height: 300px;
+         border-radius: 20px;
+         padding: 2rem;
+         text-align: center;
+         align-self: center;
+         box-shadow: inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #FFFFFF;
+
+         &-content{
+            text-align: center;
+            i{
+               font-size: 3rem;
+               padding: .5rem;
+            }
+
+            h1{
+               font-size: 1.7rem;
+               font-weight: 700!important;
+               padding-top: 1.3rem ;
+               color: var(--secondaryColor);
+            }
+
+            p{
+               font-size: 1rem;
+               padding-top: 1rem;
+               color: rgb(100, 100, 100);
+            }
+         }
+
+      }
+   }
+}
+// About Company
+.aboutC{
+   display: flex;
+   flex-direction: row;
+   gap: 2rem;
+   margin:0 100px 100px 50px;
+   justify-content: center;
+   color: var(--secondaryColor);
+   
+   p{
+      font-size: 1.5rem;
+      color: black;
+   }
+   &-title{
+      font-size: 3rem;
+      font-weight: 400;
+
+      h4{
+         padding-bottom: 1rem;
+      }
+      p{
+         font-size: 1rem;
+      }
+   }
+   &-paragraph{
+      line-height: 2;
+      width: 60%;
+      text-align: justify;
+      float: right;
    }
 }
