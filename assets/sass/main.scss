@@ -1,0 +1,129 @@
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+body{
+   background-color: rgb(255, 255, 255);
+   font-family: 'Anek Latin', sans-serif;
+   font-size: 62%;
+   color: #1783c7;
+}
+
+a{
+   text-decoration: none;
+   text-align: center;
+   color:rgba(39, 10, 10, 0.404);
+}
+
+li{
+   list-style: none;
+}
+
+// Navbar styling
+.navbar{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   padding: 2rem 0;
+   box-shadow: -3px -3px 7px #ffffff,
+             3px 3px 5px #ceced1,
+             inset -3px -3px 10px #ffffff,
+             inset 3px 3px 10px #ceced1;
+   
+   position: fixed;
+   top: 0;
+   width: 100%;
+
+   &-brand{
+      display: flex;
+      flex-direction: row;
+      color:#1783c7;
+      height: 3rem;
+     
+   }
+
+   &-nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 2rem;
+
+      .navbar-links{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         font-weight: 300!important;
+         
+         li a:hover{
+            border-bottom: 2px solid #1783c7;
+            border-width: 50%;
+            transition: ease-in-out .5s;
+            color: black;
+         }
+
+         li a{
+           margin-right: 2.2rem;
+         }
+
+         
+      }
+
+      .social-links{
+         
+         .social-link{
+            color:#1783c7;
+            padding: .4rem .8rem;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: inset 18px 18px 35px #fff,
+            inset -18px -18px 35px #b9b8b8;
+
+            i{
+               font-size: 1.4rem;
+               text-align: center;
+            }
+            
+         }
+         
+      }
+   }
+   
+}
+
+// About section styling
+.about{
+   display: flex;
+   flex-direction: row;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+   margin: 0 100px;
+
+   h4, p{
+      color: #4475ddb7;
+      font-size: 1.5rem;
+   }
+
+   &-title{
+      float: left;
+      font-size: 3rem;
+      margin-right: 2rem;
+      font-weight: 400;
+   }
+
+   &-border{
+      width: 0px;
+      height: 50%;
+      border-right: 2px solid #4475ddb7;
+      position: absolute;
+      left: 600px;
+   }
+
+   &-paragraph{
+      float: right;
+      line-height: 2;
+      width: 70%;
+   }
+}
