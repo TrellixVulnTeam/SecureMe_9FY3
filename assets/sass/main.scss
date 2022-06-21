@@ -146,7 +146,7 @@ li{
    display: flex;
    flex-direction: column;
    text-align: center;
-   height: 100vh;
+   // height: 100vh;
    
 
    &-title{
@@ -212,8 +212,9 @@ li{
    display: flex;
    flex-direction: row;
    gap: 2rem;
-   margin:0 100px 100px 50px;
+   margin:200px 50px;
    justify-content: center;
+   align-items: center;
    color: var(--secondaryColor);
    
    p{
@@ -287,4 +288,54 @@ li{
          }
       }
    }
+}
+
+// Contact Us styling
+
+.Contact{
+   text-align: center;
+
+   h3{
+      font-size: 3rem;
+      color: var(--primaryColor);
+   }
+
+   form{
+      display: flex;
+      flex-direction: column;
+      margin: 50px 100px;
+
+      input, textarea{
+         display: inline-block;
+         margin-bottom: 1.5rem;
+         padding: 1.5rem;
+         font-size: 2rem;
+         outline: none;
+      }
+
+      button{
+         display: block;
+         padding: 1.5rem;
+         align-items: center;
+         font-size: 2rem;
+         font-weight: bolder;
+         color: black;
+         border: 3px solid #21465d;
+         border-radius: 10px;
+      }
+
+      button:hover{
+         color:whitesmoke;
+         transform: scale(1.1);
+         background-color: #21465d;
+         border: none;
+      }
+   }
+}
+
+footer{
+   margin: 30px 0;
+   text-align: center;
+   font-size: 1.5rem;
+   
 }
