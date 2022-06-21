@@ -111,10 +111,21 @@ p {
         padding-bottom: 2rem !important;
         margin-top: 40px; }
       .about-border {
-        display: none;
-        visibility: hidden; }
+        display: none; }
       .about-paragraph {
         width: 90% !important; } }
+  @media (min-width: 915px) and (max-width: 1260px) {
+    .about {
+      margin: 50px; }
+      .about-title {
+        text-align: left !important;
+        font-size: 2.5rem !important;
+        padding-bottom: 2rem !important; }
+      .about-border {
+        display: none !important; }
+      .about-paragraph {
+        width: 90% !important;
+        line-height: .8; } }
   .about h4, .about p {
     color: var(--secondaryColor);
     font-size: 1.5rem; }
@@ -157,6 +168,13 @@ p {
     .features-cards {
       display: flex !important;
       flex-direction: column; }
+      .features-cards .card {
+        font-size: 1rem;
+        width: auto !important;
+        padding: 1rem; } }
+  @media (min-width: 915px) and (max-width: 1260px) {
+    .features-cards {
+      margin: 20px 50px !important; }
       .features-cards .card {
         font-size: 1rem;
         width: auto !important;
