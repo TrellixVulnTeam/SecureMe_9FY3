@@ -11,7 +11,7 @@
 body {
   background-color: white;
   font-family: 'Anek Latin', sans-serif;
-  font-size: 62%;
+  font-size: 62.5%;
   color: var(--primaryColor);
   scroll-behavior: smooth;
   height: auto; }
@@ -23,6 +23,9 @@ a {
 
 li {
   list-style: none; }
+
+p {
+  color: black !important; }
 
 .navbar {
   display: flex;
@@ -36,6 +39,25 @@ li {
   width: 100%;
   z-index: 2000;
   overflow: hidden; }
+  @media (max-width: 653px) {
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      justify-content: space-between !important;
+      align-items: center; }
+      .navbar-brand img {
+        width: 2.5rem; }
+      .navbar-brand h3 {
+        font-size: 2rem !important; }
+      .navbar-nav {
+        flex-direction: column !important;
+        font-size: 1rem !important;
+        margin-top: 3.5rem !important;
+        align-items: center !important;
+        gap: 1rem !important; }
+        .navbar-nav .social-link {
+          margin-top: 1rem !important; } }
   .navbar-brand {
     display: flex;
     flex-direction: row;
@@ -75,7 +97,24 @@ li {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  margin: 0 100px; }
+  margin: 0 50px; }
+  @media (max-width: 914px) {
+    .about {
+      display: flex;
+      flex-direction: column !important;
+      height: auto;
+      align-items: left !important;
+      margin: 200px 20px; }
+      .about-title {
+        text-align: center !important;
+        font-size: 2rem !important;
+        padding-bottom: 2rem !important;
+        margin-top: 40px; }
+      .about-border {
+        display: none;
+        visibility: hidden; }
+      .about-paragraph {
+        width: 90% !important; } }
   .about h4, .about p {
     color: var(--secondaryColor);
     font-size: 1.5rem; }
@@ -100,6 +139,28 @@ li {
   display: flex;
   flex-direction: column;
   text-align: center; }
+  @media (max-width: 914px) {
+    .features {
+      margin: 0 30px; }
+      .features-title h1 {
+        font-size: 4rem !important; }
+      .features-cards {
+        display: flex !important;
+        flex-direction: row; }
+        .features-cards .card {
+          font-size: 1rem;
+          width: auto !important;
+          padding: 1rem; }
+          .features-cards .card-content p {
+            font-size: 1.5rem !important; } }
+  @media (max-width: 653px) {
+    .features-cards {
+      display: flex !important;
+      flex-direction: column; }
+      .features-cards .card {
+        font-size: 1rem;
+        width: auto !important;
+        padding: 1rem; } }
   .features-title {
     font-size: 1.5rem;
     margin-bottom: 3rem; }
@@ -150,6 +211,15 @@ li {
   justify-content: center;
   align-items: center;
   color: var(--secondaryColor); }
+  @media (max-width: 914px) {
+    .aboutC {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: left !important; }
+      .aboutC-paragraph {
+        line-height: 2;
+        width: 90% !important;
+        text-align: left; } }
   .aboutC p {
     font-size: 1.5rem;
     color: black; }
@@ -169,6 +239,20 @@ li {
 .products {
   text-align: center;
   margin-bottom: 100px; }
+  @media (max-width: 914px) {
+    .products-cards .card {
+      padding: 1rem; }
+      .products-cards .card-detail h1 {
+        font-size: 1rem !important;
+        font-weight: bold; } }
+  @media (max-width: 653px) {
+    .products-cards {
+      display: flex !important;
+      flex-direction: column; }
+      .products-cards .card {
+        padding: .8rem; }
+        .products-cards .card p {
+          font-size: 1rem !important; } }
   .products h3 {
     font-size: 3rem;
     color: var(--secondaryColor);
@@ -203,6 +287,9 @@ li {
 
 .Contact {
   text-align: center; }
+  @media (max-width: 653px) {
+    .Contact form {
+      margin: 50px 30px !important; } }
   .Contact h3 {
     font-size: 3rem;
     color: var(--primaryColor); }
@@ -232,6 +319,9 @@ li {
       border: none; }
 
 footer {
-  margin: 30px 0;
+  margin: 30px 0 0 0;
   text-align: center;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  background-color: #21465d;
+  padding: 1.5rem;
+  color: whitesmoke; }

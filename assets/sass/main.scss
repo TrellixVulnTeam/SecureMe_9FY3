@@ -13,7 +13,7 @@
 body{
    background-color: white;
    font-family: 'Anek Latin', sans-serif;
-   font-size: 62%;
+   font-size: 62.5%;
    color: var(--primaryColor);
    scroll-behavior: smooth;
    height: auto;
@@ -27,6 +27,10 @@ a{
 
 li{
    list-style: none;
+}
+
+p{
+   color: black!important;
 }
 
 // Navbar styling
@@ -46,7 +50,35 @@ li{
    width: 100%;
    z-index: 2000;
    overflow: hidden;
+   
+   
+   @media (max-width: 653px){
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      justify-content: space-between!important;
+      align-items: center;
 
+      &-brand{
+         img{
+            width: 2.5rem;
+         }
+         h3{
+            font-size: 2rem!important;
+         }
+      }
+
+      &-nav{
+         flex-direction: column!important;
+         font-size: 1rem!important;
+         margin-top: 3.5rem!important;
+         align-items: center!important;
+         gap: 1rem!important;
+         .social-link{
+            margin-top: 1rem!important;
+         }
+      }
+   }
    &-brand{
       display: flex;
       flex-direction: row;
@@ -111,7 +143,33 @@ li{
    height: 100vh;
    justify-content: center;
    align-items: center;
-   margin: 0 100px;
+   margin: 0 50px;
+
+   @media (max-width: 914px) {
+      display: flex;
+      flex-direction: column!important;
+      height: auto;
+      align-items: left!important;
+      margin: 200px 20px;
+
+
+      &-title{
+         text-align: center!important;
+         font-size: 2rem!important;
+         padding-bottom: 2rem!important;
+         margin-top: 40px;
+      }
+      &-border{
+         display:none;
+         visibility: hidden;
+      }
+
+      &-paragraph{
+         width: 90%!important;
+      }
+   }
+
+
 
    h4, p{
       color: var(--secondaryColor);
@@ -148,6 +206,45 @@ li{
    text-align: center;
    // height: 100vh;
    
+   @media (max-width: 914px){
+      margin: 0 30px;
+
+      &-title{
+         h1{
+            font-size: 4rem!important;
+         }
+      }
+      &-cards{
+         display: flex!important;
+         flex-direction: row;
+         
+
+         .card{
+            font-size: 1rem;
+            width: auto!important;
+            padding: 1rem;
+
+            &-content{
+               p{
+                  font-size: 1.5rem!important;
+               }
+            }
+         }
+      }
+   }
+   @media (max-width: 653px){
+      &-cards{
+         display: flex!important;
+         flex-direction: column;
+         
+
+         .card{
+            font-size: 1rem;
+            width: auto!important;
+            padding: 1rem;
+         }
+      } 
+   }
 
    &-title{
       font-size: 1.5rem;
@@ -217,6 +314,17 @@ li{
    align-items: center;
    color: var(--secondaryColor);
    
+   @media (max-width: 914px){
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: left!important;
+
+      &-paragraph{
+         line-height: 2;
+         width: 90%!important;
+         text-align: left;
+      }
+   }
    p{
       font-size: 1.5rem;
       color: black;
@@ -245,6 +353,35 @@ li{
    text-align: center;
    margin-bottom: 100px;
 
+   @media (max-width: 914px){
+      &-cards{
+         .card{
+            padding: 1rem;
+
+            &-detail{
+               h1{
+                  font-size: 1rem!important;
+                  font-weight: bold;
+               }
+            }
+         }
+      }
+   }
+   @media (max-width: 653px){
+      &-cards{
+         display: flex !important;
+         flex-direction: column;
+         
+
+         .card{
+            padding: .8rem;
+            
+            p{
+               font-size: 1rem!important;
+            }
+         }
+      }
+   }
    h3{
       font-size: 3rem;
       color: var(--secondaryColor);
@@ -294,7 +431,11 @@ li{
 
 .Contact{
    text-align: center;
-
+   @media (max-width: 653px){
+      form{
+         margin:50px 30px!important;
+      }
+   }
    h3{
       font-size: 3rem;
       color: var(--primaryColor);
@@ -334,8 +475,10 @@ li{
 }
 
 footer{
-   margin: 30px 0;
+   margin: 30px 0 0 0;
    text-align: center;
    font-size: 1.5rem;
-   
+   background-color: #21465d;
+   padding: 1.5rem;
+   color: whitesmoke;
 }
